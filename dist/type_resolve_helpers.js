@@ -191,7 +191,7 @@ function resolveTree(node, parentTypes = null) {
                     logger_1.warn(`Unable to resolve object key type, this is likely due to invalid JSDoc. Defaulting to \`string\`.`);
                     keyType = strTypeNode;
                 }
-                else if (node.children[0].type !== ENodeType.TYPE || (node.children[0].name !== 'string' && node.children[0].name !== 'number')) {
+                else if (node.children[0].type !== ENodeType.TYPE) {
                     logger_1.warn(`Invalid object key type. It must be \`string\` or \`number\`, but got: ${node.children[0].name}. Defaulting to \`string\`.`);
                     keyType = strTypeNode;
                 }
